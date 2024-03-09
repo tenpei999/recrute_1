@@ -1,0 +1,22 @@
+@use "../../Foundation/index" as *;
+
+.p-policy {
+  height: 1150px;
+  @include mq (screen02) {
+    height: 1400px;
+  }
+  @include mq (screen03) {
+    height: 800px;
+  }
+  &__list {
+    width: 90%;
+    @include mq(screen03) {
+      width: 40%;
+    }
+  }
+  &__inner {
+    @include mq (screen03) {
+      height: 100%;
+    }
+  }
+}

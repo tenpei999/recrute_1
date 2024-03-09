@@ -1,0 +1,68 @@
+@use "../../Foundation/index" as *;
+
+.c-button {
+  &-square {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 47px;
+    position: fixed;
+    z-index: 1;
+
+    &.is-open {
+      .c-button-square__square {
+        background-color: $gold;
+      }
+      @include mq (screen03) {
+        .c-button-square__square {
+          background-color: #fff;
+        }
+      }
+    }
+
+    &__square {
+      width: 45%;
+      padding-bottom: 45%;
+      margin-bottom: 5%;
+      background-color: #fff;
+    }
+
+    &__name {
+      position: fixed;
+      color: #fff;
+      top: 100px;
+      z-index: 1;
+      @include mq (screen02) {
+        top: 100px;
+      }
+    }
+  }
+
+  &--gold {
+    text-align: center;
+    width: 80vw;
+    height: 5rem;
+
+    @include mq (screen02) {
+      width: 60vw;
+    }
+
+    @include mq (screen03) {
+      width: 100%;
+      height: unset;
+    }
+
+    a {
+      margin: auto;
+    }
+
+    background: linear-gradient(90deg, #E5DE97 -16.73%, #735809 113.06%);
+    &.policy {
+      width: 100%;
+      height: unset; 
+      @include mq (screen02) {
+        height: 5rem;
+      }
+    }
+  }
+}

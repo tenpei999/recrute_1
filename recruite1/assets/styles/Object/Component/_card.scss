@@ -1,0 +1,61 @@
+@use "../../Foundation/index" as *;
+
+.c-card {
+  &--ability {
+    position: relative;
+    box-shadow: 4px 4px 10px 0px #00000040;
+    aspect-ratio: 1 / 0.75;
+    max-width: 400px;
+
+
+    &__head {
+      display: flex;
+    }
+
+    &__num-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      background-color: $gold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      font-family: $din;
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    &__title {
+      padding-top: 20px;
+      font-size: clamp(24px, 3vw, 36px);
+      font-family: $accentFont;
+      display: inline-block;
+      @include mq (screen03) {
+        font-size: clamp(20px, 2vw, 24px);
+      }
+    }
+
+    &__sentence {
+      padding: 30px 16px 0 16px;
+      font-size: clamp(16px, 3vw, 24px);
+      text-align: justify;
+      @include mq (screen03) {
+        font-size: clamp(16px, 1.1vw, 24px);
+      }
+    }
+  }
+
+  &--experience {
+    margin: auto;
+    height: auto;
+    width: 90%;
+    aspect-ratio: 0.82 / 1;
+    @include mq (screen02) {
+      width: 484px;
+    }
+  }
+}

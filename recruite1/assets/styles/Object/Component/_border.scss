@@ -1,0 +1,11 @@
+@use "../../Foundation/index" as *;@use "../../Foundation/index" as *;
+
+.c-border {
+  &--gold {
+    border-bottom: 0.5px solid $gold;
+  }
+  &--emphasis {
+    border-bottom: 0.5px solid;
+    font-weight: 500;
+  }
+}

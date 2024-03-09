@@ -1,0 +1,43 @@
+@use "../../Foundation/index" as *;
+
+.p-nav {
+  display: block;
+  position: relative;
+  display: block;
+  right: -80vw;
+  top: 1.25rem;
+
+  &__body {
+    position: absolute;
+    text-align: center;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+
+    @include mq(screen03) {
+      width: 280px;
+      height: 456px;
+      top: 30vh;
+      justify-content: flex-end;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(13px, 5vw, 32px);
+
+      @include mq(screen03) {
+        font-size: clamp(13px, 1.5vw, 15px);
+        line-height: 170%;
+        padding-bottom: 0;
+      }
+
+      &.is-mp {
+        @include mq(screen02) {
+          display: none;
+        }
+      }
+    }
+  }
+}

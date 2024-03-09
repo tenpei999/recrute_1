@@ -1,0 +1,29 @@
+@use "../../Foundation/index" as *;
+
+.c-catchphrase {
+  font-size: 13vw;
+
+  @include mq (screen02) {
+    font-size: 7.4vw;
+  }
+
+  &__particle {
+    font-size: 90%;
+  }
+
+  &__sub {
+    font-size: 3vw;
+    line-height: 5.5vw;
+    span {
+      font-weight: 500;
+    }
+    @include mq (screen02) {
+      font-size: 2.5vw;
+      line-height: 5vw;
+    }
+    @include mq (screen03) {
+      font-size: 1.5rem;
+      line-height: unset;
+    }
+  }
+}

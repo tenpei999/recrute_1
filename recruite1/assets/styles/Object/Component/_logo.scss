@@ -1,0 +1,19 @@
+@use "../../Foundation/index" as *;
+
+.c-logo {
+  left: 100px;
+  position: absolute;
+
+  &.is-open {
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  &__parent {
+    padding-left: 8%;
+
+    @include mq (screen02) {
+      padding-left: unset;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@use "./index" as *;
+
+.wpcf7-form input,
+.wpcf7-form textarea {
+  border: 1px solid #000000;
+  /* 例：1ピクセルの黒いボーダー */
+}
+
+.wpcf7 {
+  margin: auto;
+  padding: 20px 50px 0 50px;
+
+  &-form {
+
+    .form-field {
+
+      padding-top: 20px;
+
+      &.email {
+        padding-bottom: 20px;
+      }
+
+      .item {
+        &-name {
+          line-height: 46px;
+          @include mq (screen02) {
+            width: 170px;
+          }
+        }
+      }
+    }
+
+    .text-field {
+      margin-top: 20px;
+    }
+
+    input {
+      width: 100%;
+      height: 46px;
+      margin-top: 0.5rem;
+      @include mq (screen02) {
+        width: 521px;
+        margin-top: 0;
+      }
+
+      &.wpcf7-submit {
+        width: 224px;
+        height: 64px;
+        margin: 20px auto 0 auto;
+        display: block;
+        color: #fff;
+        background: linear-gradient(90deg, #E5DE97 -16.73%, #735809 113.06%);
+
+      }
+    }
+
+    textarea {
+      margin-top: 20px;
+      width: 100%;
+      height: 264px;
+    }
+
+    input,
+    textarea {
+      border: 1px solid #000000;
+    }
+  }
+}
+
+.required {
+  &-asterisk {
+    color: red;
+    font-size: smaller;
+    padding-right: 2px;
+    vertical-align: super;
+  }
+  &-note {
+    text-align: right;
+  }
+}

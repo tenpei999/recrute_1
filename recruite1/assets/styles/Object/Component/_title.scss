@@ -1,0 +1,23 @@
+@use "../../Foundation/index" as *;
+
+.c-title {
+  &-gold {
+    font-family: $accentFont;
+    color: $gold;
+    border-color: $gold;
+    border-width: 0.5px;
+  }
+  &-silver {
+    font-family: $accentFont;
+    color: $silver;
+    font-size: 32px;
+    line-height: 64px;
+    &__sub {
+      font-family: $accentFont;
+      text-align: justify;
+      text-align-last: justify;
+      width: 93%;
+      transform: translateY(-10px);
+    }
+  }
+}

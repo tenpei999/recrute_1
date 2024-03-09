@@ -1,0 +1,7 @@
+@use "../../Foundation/index" as *;
+
+.c-clamp {
+  &--1215 {
+    font-size: clamp(1.2rem, 6vw, 1.5rem );
+  }
+}

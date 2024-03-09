@@ -1,0 +1,23 @@
+@use "../../Foundation/index" as *;
+
+.p-contact {
+  &__wrapper {
+    border: 0.5px solid $gold;
+    width: 100%;
+    @include mq (screen02) {
+      width: 788px;
+    }
+  }
+  &__accent {
+    position: relative;
+    &::before {
+      content: '•';
+      position: absolute;
+      top: -0.75em; 
+      left: 50%;
+      transform: translateX(-50%);
+      color: $gold; 
+      font-size: 0.9em; 
+    }
+  }
+}

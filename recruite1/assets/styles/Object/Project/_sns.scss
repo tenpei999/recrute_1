@@ -1,0 +1,11 @@
+@use "../../Foundation/index" as *;
+
+.p-sns__post {
+  width: 300px;
+  @include mq (screen02) {
+    width: 620px;
+  }
+  @include mq (screen03) {
+    width: 920px;
+  }
+}

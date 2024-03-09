@@ -1,0 +1,29 @@
+.c-white-space {
+  width: 90%;
+  height: 700px;
+  margin: 0 1rem;
+  font-family: Noto Sans JP;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: -0.39em;
+  text-align: justified;
+  @include mq (screen03) {
+    height: 529px;
+    width: 429px;
+    aspect-ratio: 0.76 / 1;
+  }
+
+  //styleName: 本文テキスト;
+  font-family: Noto Sans JP;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: justified;
+}
+
+#title-space, #white-space {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}

@@ -1,0 +1,35 @@
+.c-dli-arrow-right {
+  @include mq (screen02) {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFF;
+    line-height: 1;
+    position: relative;
+    width: 3em;
+    height: 0.1em;
+    background: currentColor;
+    bottom: 3rem;
+    left: 45vw;
+    @include mq (screen03) {
+      bottom: 2.8rem;
+      left: 15.5rem;
+      width: 1.5em;
+    }
+  }
+}
+
+.c-dli-arrow-right::before {
+  @include mq (screen02) {
+    content: '';
+    width: 0.65em;
+    border: 0.1em solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    position: absolute;
+    top: 50%;
+    right: -0.05em;
+    box-sizing: border-box;
+  }
+}

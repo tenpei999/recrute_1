@@ -1,0 +1,52 @@
+@use "../../Foundation/index" as *;
+
+.p-header {
+
+  .p-nav {
+    &__body {
+      transform: translateX(120vw);
+      text-align: center;
+      width: 120vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 15rem 0 10rem 0;
+      
+      @include mq (screen03) {
+        justify-content: space-around;
+        padding: 2rem 0;
+      }
+
+      .menu {
+        opacity: 0;
+
+        @include mq (screen02) {
+          opacity: 1;
+        }
+      }
+
+      &.is-open {
+        text-align: center;
+        transform: translateX(-7vw) translateY(-7rem);
+        transition: all 0.5s ease-in-out;
+        height: 110vh;
+        @include mq (screen03) {
+          transform: translateX(calc(100vw - 256px)) translateY(-7rem);
+          height: 454px;
+          width: 256px;
+          // width: 40vw;
+          // max-width: 400px;
+          // transform: translateY(0);
+          // left: unset;
+        }
+
+        .menu {
+          opacity: 1;
+          transition: all 0.5s ease-in;
+        }
+      }
+    }
+  }
+}
