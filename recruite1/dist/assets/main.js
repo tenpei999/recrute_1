@@ -23,6 +23,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 function changeText() {
-  console.log("hogegegegegerereEEEL");
+  console.log("hogegegegegerereEEELL");
 }
 document.addEventListener("DOMContentLoaded", changeText);
