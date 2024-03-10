@@ -19,10 +19,14 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}  # 秘密鍵のパスフレーズを指定
           script: |
+            echo "Moving to the deployment directory..."
             cd ${{ secrets.SERVER_DEPLOY_DIR }}
+            echo "Current working directory:"
+            pwd
             # git status
             # git checkout main
             # git branch -a
             # git remote -v
+            echo "Switching to main branch and pulling latest changes..."
             git switch main
             git pull origin main
