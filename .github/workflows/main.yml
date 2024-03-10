@@ -22,7 +22,7 @@ jobs:
             # ls -li
             # ls -la /home/***/www
             # pwd  # 追加: 現在のディレクトリの絶対パスを表示
-            cd ${{ secrets.SERVER_DEPLOY_DIR }}/plugin_test
+            cd ${{ secrets.SERVER_DEPLOY_DIR }}/recruite1
             # git status
             # git checkout main
             # git branch -a
