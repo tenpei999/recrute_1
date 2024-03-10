@@ -1,7 +1,7 @@
 function changeText() {
 
   // テキスト内容の定義
-  console.log('hogegegegegerereEEELL');
+  console.log('hogegegegegerereEEELLL');
 
 
 }
