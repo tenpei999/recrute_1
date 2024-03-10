@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
 jobs:
   job1:
     name: Deploy
@@ -20,20 +19,13 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}  # 秘密鍵のパスフレーズを指定
           script: |
             echo "Moving to the deployment directory..."
-            if [ -d ${{ secrets.SERVER_DEPLOY_DIR }} ]; then
-              cd ${{ secrets.SERVER_DEPLOY_DIR }}
-              echo "Current working directory:"
+            cd ${{ secrets.SERVER_DEPLOY_DIR }}
+            echo "Current working directory:"
             pwd
-            else
-              echo "Error: Deployment directory does not exist."
-              exit 1
-            fi
-
-            if [ -d .git ]; then
-              echo "This is a Git repository. Switching to main branch and pulling latest changes..."
+            # git status
+            # git checkout main
+            # git branch -a
+            # git remote -v
+            echo "Switching to main branch and pulling latest changes..."
             git switch main
             git pull origin main
-            else
-            echo "Error: This is not a Git repository."
-            exit 1
-            fi
